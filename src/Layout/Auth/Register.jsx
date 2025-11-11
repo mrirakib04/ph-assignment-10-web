@@ -1,12 +1,3 @@
-// import { useContext, useState } from "react";
-// import { HeadProvider, Title } from "react-head";
-// import { FcGoogle } from "react-icons/fc";
-// import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-// import MainContext from "../../Context/MainContext";
-// import { Link, useNavigate } from "react-router";
-// import { toast } from "react-toastify";
-// import { updateProfile } from "firebase/auth";
-
 import { useContext, useState } from "react";
 import MainContext from "../../Context/MainContext";
 import { Link, useNavigate } from "react-router";
