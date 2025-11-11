@@ -30,11 +30,11 @@ const Router = () => {
           <Route path="/forgot" element={<Forgot></Forgot>}></Route>
           {/* Private Routes */}
           <Route
-            path="/challenges/add"
+            path="/add-challenge"
             element={<AddChallenge></AddChallenge>}
           ></Route>
           <Route
-            path="/challenges/join/:id"
+            path="/join-challenges/:id"
             element={<JoinChallenge></JoinChallenge>}
           ></Route>
           <Route
