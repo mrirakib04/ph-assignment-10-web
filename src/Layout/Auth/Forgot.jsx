@@ -1,13 +1,7 @@
 import { useState } from "react";
 import auth from "../../Firebase/firebase.config";
 import { toast } from "react-toastify";
-import {
-  Button,
-  Card,
-  CardContent,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { HeadProvider, Title } from "react-head";
 
