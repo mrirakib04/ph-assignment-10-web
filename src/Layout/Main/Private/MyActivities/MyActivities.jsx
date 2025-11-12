@@ -94,14 +94,27 @@ const MyActivities = () => {
                     year: "numeric",
                   })}
                 </p>
+                <p className="text-gray-500 text-sm font-medium">
+                  Updated on:{" "}
+                  {activity?.updateDate
+                    ? new Date(activity?.updateDate).toLocaleDateString(
+                        "en-GB",
+                        {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
+                        }
+                      )
+                    : "None"}
+                </p>
 
                 <div className="flex items-center gap-2 justify-between flex-wrap">
-                  <Link to={`/join-challenges/${activity.challengeId}`}>
+                  <Link to={`/join-challenges/${activity._id}`}>
                     <Button variant="contained" color="success">
                       Update Progress
                     </Button>
                   </Link>
-                  <Link to={`/my-activities/${activity.challengeId}`}>
+                  <Link to={`/my-activities/${activity._id}`}>
                     <Button variant="contained" color="primary">
                       View More
                     </Button>

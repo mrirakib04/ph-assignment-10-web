@@ -55,6 +55,12 @@ const ChallengeDetails = () => {
 
   // Join challenge
   const handleJoin = async () => {
+    if (!user)
+      return toast.error(`You have to login first!`, {
+        position: "top-right",
+        autoClose: 3000,
+        draggable: true,
+      });
     try {
       await AxiosPublic.post(`/challenges/join/${id}`, {
         userId: user.email,
