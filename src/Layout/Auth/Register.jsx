@@ -94,7 +94,7 @@ const Register = () => {
   return (
     <div className="w-full flex flex-col items-center sm:gap-5 gap-2 px-5 py-10">
       <HeadProvider>
-        <Title>Register || EcoTrack</Title>
+        <Title>Join EcoTrack</Title>
       </HeadProvider>
 
       <div className="flex flex-col gap-1 items-center md:mt-8 mt-4">

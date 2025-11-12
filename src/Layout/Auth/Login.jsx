@@ -82,7 +82,7 @@ const Login = () => {
   return (
     <div className="w-full flex flex-col items-center sm:gap-5 gap-2 px-5 py-10">
       <HeadProvider>
-        <Title>Login || EcoTrack</Title>
+        <Title>Login to EcoTrack</Title>
       </HeadProvider>
       <div className="flex flex-col gap-1 items-center md:mt-8 mt-4">
         <h3 className="md:text-4xl text-2xl italic font-semibold">Login</h3>

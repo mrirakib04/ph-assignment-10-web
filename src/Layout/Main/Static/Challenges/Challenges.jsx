@@ -6,13 +6,19 @@ import { Button, TextField } from "@mui/material";
 import Loader from "../../../../Components/Loader";
 import { Link } from "react-router";
 import MainContext from "../../../../Context/MainContext";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Challenges = () => {
   const AxiosPublic = useAxiosPublic();
   const [searchTerm, setSearchTerm] = useState("");
   const { user } = useContext(MainContext);
 
-  const { data: challenges = [], isLoading } = useQuery({
+  const {
+    data: challenges = [],
+    isLoading,
+    refetch,
+  } = useQuery({
     queryKey: ["challenges", searchTerm],
     queryFn: async () => {
       const res = await AxiosPublic.get(
@@ -30,6 +36,44 @@ const Challenges = () => {
       day: "2-digit",
       month: "short",
       year: "numeric",
+    });
+  };
+
+  const handleDelete = async (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "This challenge will be permanently deleted!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const res = await AxiosPublic.delete(`/delete/challenge/${id}`);
+          if (res.data.success) {
+            toast.success("Challenge deleted successfully!", {
+              position: "top-right",
+              autoClose: 2000,
+              draggable: true,
+            });
+            refetch();
+          } else {
+            toast.error(`Failed to delete challenge!`, {
+              position: "top-right",
+              autoClose: 3000,
+              draggable: true,
+            });
+          }
+        } catch (err) {
+          toast.error(`Error to delete challenge! ${err.message}`, {
+            position: "top-right",
+            autoClose: 3000,
+            draggable: true,
+          });
+        }
+      }
     });
   };
 
@@ -112,7 +156,12 @@ const Challenges = () => {
                     </Button>
                   </Link>
                   {user?.email === ch.createdBy && (
-                    <Button variant="contained" color="error" size="medium">
+                    <Button
+                      variant="contained"
+                      color="error"
+                      size="medium"
+                      onClick={() => handleDelete(ch._id)}
+                    >
                       Delete
                     </Button>
                   )}
