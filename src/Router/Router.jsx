@@ -12,6 +12,7 @@ import MyActivitiesDetails from "../Layout/Main/Private/MyActivitiesDetails/MyAc
 import Forgot from "../Layout/Auth/Forgot";
 import Register from "../Layout/Auth/Register";
 import Login from "../Layout/Auth/Login";
+import UpdateChallenge from "../Layout/Main/Private/UpdateChallenge/UpdateChallenge";
 
 const Router = () => {
   return (
@@ -36,6 +37,10 @@ const Router = () => {
           <Route
             path="/join-challenges/:id"
             element={<JoinChallenge></JoinChallenge>}
+          ></Route>
+          <Route
+            path="/update-challenge/:id"
+            element={<UpdateChallenge></UpdateChallenge>}
           ></Route>
           <Route
             path="/my-activities"

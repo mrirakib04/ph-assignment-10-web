@@ -48,7 +48,7 @@ const Profile = () => {
   return (
     <div className="w-full flex md:flex-row justify-center flex-col items-center gap-5 mt-5 sm:mt-10 px-5 py-10">
       <HeadProvider>
-        <Title>Profile || SkillSwap</Title>
+        <Title>Profile || EcoTrack</Title>
       </HeadProvider>
       <div className="flex flex-col items-center gap-3 w-full max-w-md bg-linear-to-b from-sky-900 to-white py-10 rounded-xl shadow-lg text-center">
         <Avatar
