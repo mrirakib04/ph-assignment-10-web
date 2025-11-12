@@ -67,7 +67,7 @@ const Challenges = () => {
             });
           }
         } catch (err) {
-          toast.error(`Error to delete challenge! ${err.message}`, {
+          toast.error(`Error to delete challenge: ${err.message}`, {
             position: "top-right",
             autoClose: 3000,
             draggable: true,
