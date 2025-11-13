@@ -92,7 +92,7 @@ const JoinChallenge = () => {
       <img
         src={activity.challengeDetails.imageUrl}
         alt={activity.challengeDetails.title}
-        className="w-full max-w-md h-64 object-cover rounded-md shadow-md"
+        className="w-full max-w-2xl h-64 object-cover rounded-md shadow-md"
       />
 
       {/* Challenge Title */}
@@ -101,7 +101,9 @@ const JoinChallenge = () => {
       </h2>
 
       {/* Challenge Description */}
-      <p className="text-gray-700">{activity.challengeDetails.description}</p>
+      <p className="text-gray-700 max-w-4xl mx-auto">
+        {activity.challengeDetails.description}
+      </p>
 
       {/* Activity Data */}
       <div className="w-full max-w-md border rounded p-5 shadow-md bg-white mt-4 flex flex-col gap-2">
