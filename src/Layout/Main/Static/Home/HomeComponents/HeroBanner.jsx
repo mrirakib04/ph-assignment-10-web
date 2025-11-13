@@ -13,7 +13,7 @@ const HeroBanner = () => {
   const { data: stats = {} } = useQuery({
     queryKey: ["communityStats"],
     queryFn: async () => {
-      const res = await AxiosPublic.get("/challenges/stats");
+      const res = await AxiosPublic.get("/api/challenges/stats");
       return res.data.data;
     },
     retry: 2,
@@ -99,24 +99,22 @@ const HeroBanner = () => {
       </motion.div>
 
       {/* Community Stats */}
-      <div className="flex flex-wrap justify-center gap-8 mt-10">
-        <div className="text-center">
+      <div className="flex flex-wrap justify-center gap-8 py-10">
+        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-sky-100 via-white to-white">
           <p className="text-3xl font-bold text-emerald-700">
             {stats.totalParticipants || 0}+
           </p>
-          <p className="text-gray-600">Active Participants</p>
+          <p className="text-gray-600 font-medium">Active Participants</p>
         </div>
-        <div className="text-center">
+        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-green-100 via-white to-white">
           <p className="text-3xl font-bold text-teal-700">
-            {stats.totalPlasticSaved || 0} kg
+            {stats.totalChallenges || 0}
           </p>
-          <p className="text-gray-600">Plastic Saved</p>
+          <p className="text-gray-600 font-medium">Total Challenges</p>
         </div>
-        <div className="text-center">
-          <p className="text-3xl font-bold text-lime-700">
-            {stats.totalCO2Saved || 0} kg
-          </p>
-          <p className="text-gray-600">CO₂ Reduced</p>
+        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-purple-100 via-white to-white">
+          <p className="text-3xl font-bold text-lime-700">20 kg/week</p>
+          <p className="text-gray-600 font-medium">Impact Metric</p>
         </div>
       </div>
     </div>
