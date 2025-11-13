@@ -8,6 +8,7 @@ import { HeadProvider, Title } from "react-head";
 import { Button } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { TiInfo } from "react-icons/ti";
+import { toast } from "react-toastify";
 
 const ChallengeDetails = () => {
   const { id } = useParams();

@@ -13,6 +13,7 @@ import Forgot from "../Layout/Auth/Forgot";
 import Register from "../Layout/Auth/Register";
 import Login from "../Layout/Auth/Login";
 import UpdateChallenge from "../Layout/Main/Private/UpdateChallenge/UpdateChallenge";
+import IsLogin from "./Security/IsLogin";
 
 const Router = () => {
   return (
@@ -32,25 +33,52 @@ const Router = () => {
           {/* Private Routes */}
           <Route
             path="/add-challenge"
-            element={<AddChallenge></AddChallenge>}
+            element={
+              <IsLogin>
+                <AddChallenge></AddChallenge>
+              </IsLogin>
+            }
           ></Route>
           <Route
             path="/join-challenges/:id"
-            element={<JoinChallenge></JoinChallenge>}
+            element={
+              <IsLogin>
+                <JoinChallenge></JoinChallenge>
+              </IsLogin>
+            }
           ></Route>
           <Route
             path="/update-challenge/:id"
-            element={<UpdateChallenge></UpdateChallenge>}
+            element={
+              <IsLogin>
+                <UpdateChallenge></UpdateChallenge>
+              </IsLogin>
+            }
           ></Route>
           <Route
             path="/my-activities"
-            element={<MyActivities></MyActivities>}
+            element={
+              <IsLogin>
+                <MyActivities></MyActivities>
+              </IsLogin>
+            }
           ></Route>
           <Route
             path="/my-activities/:id"
-            element={<MyActivitiesDetails></MyActivitiesDetails>}
+            element={
+              <IsLogin>
+                <MyActivitiesDetails></MyActivitiesDetails>
+              </IsLogin>
+            }
           ></Route>
-          <Route path="/profile" element={<Profile></Profile>}></Route>
+          <Route
+            path="/profile"
+            element={
+              <IsLogin>
+                <Profile></Profile>
+              </IsLogin>
+            }
+          ></Route>
         </Route>
         <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
