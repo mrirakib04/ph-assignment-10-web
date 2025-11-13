@@ -106,6 +106,7 @@ const Challenges = () => {
           {challenges.length > 0 ? (
             challenges.map((ch) => (
               <div
+                data-aos="zoom-in"
                 key={ch._id}
                 className="border rounded-xl p-5 shadow-md hover:shadow-lg bg-white shadow-gray-400 duration-300 flex flex-col gap-1 justify-between"
               >

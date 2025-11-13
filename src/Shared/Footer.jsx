@@ -64,10 +64,7 @@ const Footer = () => {
                 href="#"
                 className="hover:text-white transition duration-300 items-center flex gap-1 group"
               >
-                <span className="p-1 rounded-full bg-white group-hover:text-black duration-300 text-gray-700">
-                  <FaXTwitter></FaXTwitter>
-                </span>
-                @EcoTrack
+                Instagram
               </a>
             </li>
             <li>
@@ -75,10 +72,7 @@ const Footer = () => {
                 href="#"
                 className="hover:text-white transition duration-300 items-center flex gap-1 group"
               >
-                <span className="p-1 rounded-full bg-white group-hover:bg-blue-600 group-hover:text-white text-black duration-300">
-                  <FaFacebookF></FaFacebookF>
-                </span>
-                @EcoTrack
+                Youtube
               </a>
             </li>
             <li>
@@ -86,10 +80,7 @@ const Footer = () => {
                 href="#"
                 className="hover:text-white transition duration-300 items-center flex gap-1 group"
               >
-                <span className="p-1 rounded-full bg-white group-hover:bg-red-600 group-hover:text-white text-black duration-300">
-                  <FaYoutube></FaYoutube>
-                </span>
-                @EcoTrack
+                Facebook
               </a>
             </li>
             <li>
@@ -97,9 +88,6 @@ const Footer = () => {
                 href="#"
                 className="hover:text-white transition duration-300 items-center flex gap-1 group"
               >
-                <span className="p-1 rounded-full bg-white group-hover:text-red-700 duration-300 text-black">
-                  <IoMdMail></IoMdMail>
-                </span>
                 support@ecotrack.com
               </a>
             </li>

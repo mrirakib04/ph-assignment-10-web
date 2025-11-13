@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import MainContext from "../../../../Context/MainContext";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import Loader from "../../../../Components/Loader";
 import { HeadProvider, Title } from "react-head";
 import { Button } from "@mui/material";
+import { TiInfo } from "react-icons/ti";
 
 const JoinChallenge = () => {
   const { id } = useParams();
@@ -79,6 +80,22 @@ const JoinChallenge = () => {
         <p className="text-center text-orange-500 font-medium">
           Challenge not found or not joined.
         </p>
+      </div>
+    );
+
+  if (user?.email !== activity?.userId)
+    return (
+      <div className="flex flex-col items-center gap-2 py-20">
+        <TiInfo className="text-5xl text-red-800"></TiInfo>
+        <p className="text-center text-red-500 font-medium">
+          You haven't own this activity!
+        </p>
+        <Link
+          className="py-1 px-6 rounded-lg bg-green-600 hover:bg-green-800 duration-300 transition font-medium text-white text-lg mt-2"
+          to={"/my-activities"}
+        >
+          Go back!
+        </Link>
       </div>
     );
 

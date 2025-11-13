@@ -57,6 +57,7 @@ const MyActivities = () => {
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 w-full max-w-6xl">
           {activities.map((activity) => (
             <div
+              data-aos="zoom-in"
               key={activity._id}
               className="border rounded-xl bg-linear-to-br from-white via-white to-emerald-200 shadow-gray-400 rounded-br-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-200"
             >

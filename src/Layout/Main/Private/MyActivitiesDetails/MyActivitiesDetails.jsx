@@ -5,10 +5,14 @@ import Loader from "../../../../Components/Loader";
 import { HeadProvider, Title } from "react-head";
 import { Button, Divider } from "@mui/material";
 import { FaArrowRight } from "react-icons/fa";
+import { useContext } from "react";
+import MainContext from "../../../../Context/MainContext";
+import { TiInfo } from "react-icons/ti";
 
 const MyActivitiesDetails = () => {
   const { id } = useParams();
   const AxiosSecure = useAxiosSecure();
+  const { user } = useContext(MainContext);
 
   const { data: challenge, isLoading } = useQuery({
     queryKey: ["challenge", id],
@@ -26,6 +30,22 @@ const MyActivitiesDetails = () => {
     return (
       <div className="flex justify-center items-center h-[60vh] text-gray-600 text-lg">
         Challenge not found!
+      </div>
+    );
+
+  if (user?.email !== challenge?.userId)
+    return (
+      <div className="flex flex-col items-center gap-2 py-20">
+        <TiInfo className="text-5xl text-red-800"></TiInfo>
+        <p className="text-center text-red-500 font-medium">
+          You haven't own this activity!
+        </p>
+        <Link
+          className="py-1 px-6 rounded-lg bg-green-600 hover:bg-green-800 duration-300 transition font-medium text-white text-lg mt-2"
+          to={"/my-activities"}
+        >
+          Go back!
+        </Link>
       </div>
     );
 
