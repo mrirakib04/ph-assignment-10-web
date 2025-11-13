@@ -21,7 +21,7 @@ const Navbar = () => {
         setNavShow(false);
       }}
     >
-      <div className="bg-green-100/90 bg-opacity-90 w-full fixed z-50">
+      <div className="bg-green-100/90 bg-opacity-90 w-full fixed z-50 max-w-[1480px] mx-auto">
         <div className="text-black flex justify-between items-center py-4 md:px-6 sm:px-3 px-2 mx-auto shadow-md">
           <div className="relative text-xl flex gap-3 font-bold items-center">
             <div className="flex">
