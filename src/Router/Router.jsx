@@ -14,71 +14,82 @@ import Register from "../Layout/Auth/Register";
 import Login from "../Layout/Auth/Login";
 import UpdateChallenge from "../Layout/Main/Private/UpdateChallenge/UpdateChallenge";
 import IsLogin from "./Security/IsLogin";
+import Main from "../Layout/Main/Main";
+import Dashboard from "../Layout/Main/Dashboard/Dashboard";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App></App>}>
-          {/* Public Routes */}
-          <Route index element={<Home></Home>}></Route>
-          <Route path="/challenges" element={<Challenges></Challenges>}></Route>
+          <Route path="/" element={<Main></Main>}>
+            {/* Public Routes */}
+            <Route index element={<Home></Home>}></Route>
+            <Route
+              path="/challenges"
+              element={<Challenges></Challenges>}
+            ></Route>
+            <Route
+              path="/challenges/:id"
+              element={<ChallengeDetails></ChallengeDetails>}
+            ></Route>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/register" element={<Register></Register>}></Route>
+            <Route path="/forgot" element={<Forgot></Forgot>}></Route>
+            {/* private */}
+            <Route
+              path="/join-challenges/:id"
+              element={
+                <IsLogin>
+                  <JoinChallenge></JoinChallenge>
+                </IsLogin>
+              }
+            ></Route>
+            {/* Public Routes */}
+            <Route index element={<Home></Home>}></Route>
+            <Route
+              path="/challenges"
+              element={<Challenges></Challenges>}
+            ></Route>
+            <Route
+              path="/challenges/:id"
+              element={<ChallengeDetails></ChallengeDetails>}
+            ></Route>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/register" element={<Register></Register>}></Route>
+            <Route path="/forgot" element={<Forgot></Forgot>}></Route>
+          </Route>
+
           <Route
-            path="/challenges/:id"
-            element={<ChallengeDetails></ChallengeDetails>}
-          ></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="/forgot" element={<Forgot></Forgot>}></Route>
-          {/* Private Routes */}
-          <Route
-            path="/add-challenge"
+            path="/dashboard"
             element={
               <IsLogin>
-                <AddChallenge></AddChallenge>
+                <Dashboard></Dashboard>
               </IsLogin>
             }
-          ></Route>
-          <Route
-            path="/join-challenges/:id"
-            element={
-              <IsLogin>
-                <JoinChallenge></JoinChallenge>
-              </IsLogin>
-            }
-          ></Route>
-          <Route
-            path="/update-challenge/:id"
-            element={
-              <IsLogin>
-                <UpdateChallenge></UpdateChallenge>
-              </IsLogin>
-            }
-          ></Route>
-          <Route
-            path="/my-activities"
-            element={
-              <IsLogin>
-                <MyActivities></MyActivities>
-              </IsLogin>
-            }
-          ></Route>
-          <Route
-            path="/my-activities/:id"
-            element={
-              <IsLogin>
-                <MyActivitiesDetails></MyActivitiesDetails>
-              </IsLogin>
-            }
-          ></Route>
-          <Route
-            path="/profile"
-            element={
-              <IsLogin>
-                <Profile></Profile>
-              </IsLogin>
-            }
-          ></Route>
+          >
+            {/* Private Routes */}
+            <Route
+              path="/dashboard/add-challenge"
+              element={<AddChallenge></AddChallenge>}
+            ></Route>
+            <Route
+              path="/dashboard/update-challenge/:id"
+              element={<UpdateChallenge></UpdateChallenge>}
+            ></Route>
+            <Route
+              path="/dashboard/my-activities"
+              element={<MyActivities></MyActivities>}
+            ></Route>
+            <Route
+              path="/dashboard/my-activities/:id"
+              element={<MyActivitiesDetails></MyActivitiesDetails>}
+            ></Route>
+            <Route
+              path="/dashboard/profile"
+              element={<Profile></Profile>}
+            ></Route>
+          </Route>
         </Route>
         <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>

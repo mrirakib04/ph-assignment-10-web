@@ -73,7 +73,7 @@ const ActiveChallenges = () => {
         )}
         <Link
           to={"/challenges"}
-          className="text-lg font-medium text-white bg-emerald-600 hover:bg-emerald-800 shadow hover:shadow-md duration-300 py-2 px-5 mt-5 rounded-md"
+          className="text-lg font-medium text-white bg-green-600 hover:bg-green-800 shadow hover:shadow-md duration-300 py-2 px-5 mt-5 rounded-md"
         >
           Explore All Challenges
         </Link>

@@ -113,7 +113,7 @@ const JoinChallenge = () => {
       />
 
       {/* Challenge Title */}
-      <h2 className="sm:text-2xl text-xl font-bold text-emerald-700">
+      <h2 className="sm:text-2xl text-xl font-bold text-green-700">
         {activity.challengeDetails.title}
       </h2>
 
@@ -189,7 +189,7 @@ const JoinChallenge = () => {
           type="submit"
           variant="contained"
           color="success"
-          className="mt-3 normal-case bg-emerald-600 hover:bg-emerald-700"
+          className="mt-3 normal-case bg-green-600 hover:bg-green-700"
         >
           Update Progress
         </Button>

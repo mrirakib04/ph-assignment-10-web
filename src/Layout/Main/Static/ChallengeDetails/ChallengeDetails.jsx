@@ -107,7 +107,7 @@ const ChallengeDetails = () => {
           alt={challenge.title}
           className="w-full h-64 object-cover rounded-md shadow-md"
         />
-        <h2 className="lg:text-3xl md:text-2xl text-xl font-bold text-emerald-700">
+        <h2 className="lg:text-3xl md:text-2xl text-xl font-bold text-green-700">
           {challenge.title}
         </h2>
         <p className="text-gray-700">{challenge.description}</p>
@@ -145,7 +145,7 @@ const ChallengeDetails = () => {
               variant="contained"
               color="success"
               onClick={handleJoin}
-              className="bg-emerald-600 hover:bg-emerald-700 normal-case"
+              className="bg-green-600 hover:bg-green-700 normal-case"
             >
               Join Challenge
             </Button>

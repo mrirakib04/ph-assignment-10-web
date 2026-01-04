@@ -99,7 +99,7 @@ const Register = () => {
 
       <div className="flex flex-col gap-1 items-center md:mt-8 mt-4">
         <h3 className="md:text-4xl text-2xl italic font-semibold">Register</h3>
-        <p className="text-base font-medium text-emerald-500">
+        <p className="text-base font-medium text-green-500">
           Join us to make a clean environment.
         </p>
       </div>
@@ -192,14 +192,14 @@ const Register = () => {
         <p className="font-medium text-lg flex items-center gap-1">
           Already have an account?
           <Link
-            className="text-sky-600 hover:text-emerald-700 duration-300 font-bold"
+            className="text-sky-600 hover:text-green-700 duration-300 font-bold"
             to={"/login"}
           >
             Login
           </Link>
         </p>
         <Link
-          className="text-orange-500 hover:text-teal-800 duration-300 font-bold text-lg"
+          className="text-orange-500 hover:text-green-800 duration-300 font-bold text-lg"
           to={"/forgot"}
         >
           Forgot Password?

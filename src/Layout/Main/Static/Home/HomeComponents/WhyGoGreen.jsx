@@ -13,7 +13,7 @@ const WhyGoGreen = () => {
         <div className="grid gap-10 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center items-start">
           <div
             data-aos="fade-up"
-            className="from-emerald-50 via-white to-green-100 bg-linear-to-bl shadow-md shadow-gray-300 duration-300 rounded-2xl p-6 hover:shadow-lg transition"
+            className="from-green-50 via-white to-green-100 bg-linear-to-bl shadow-md shadow-gray-300 duration-300 rounded-2xl p-6 hover:shadow-lg transition"
           >
             <div className="text-3xl mb-3">🌱</div>
             <h3 className="text-xl font-semibold mb-2">Protect Nature</h3>
@@ -26,7 +26,7 @@ const WhyGoGreen = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="100"
-            className="from-teal-50 via-white to-cyan-100 bg-linear-to-b shadow-md shadow-gray-300 duration-300 rounded-2xl p-6 hover:shadow-lg transition"
+            className="from-green-50 via-white to-cyan-100 bg-linear-to-b shadow-md shadow-gray-300 duration-300 rounded-2xl p-6 hover:shadow-lg transition"
           >
             <div className="text-3xl mb-3">💧</div>
             <h3 className="text-xl font-semibold mb-2">Save Resources</h3>

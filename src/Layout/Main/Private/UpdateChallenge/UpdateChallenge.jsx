@@ -135,7 +135,7 @@ const UpdateChallenge = () => {
     );
 
   return (
-    <div className="w-full flex flex-col gap-5 items-center mt-5 px-5 bg-linear-to-br py-10 from-white via-white to-emerald-200">
+    <div className="w-full flex flex-col gap-5 items-center mt-5 px-5 bg-linear-to-br py-10 from-white via-white to-green-200">
       <HeadProvider>
         <Title>Update Challenge || EcoTrack</Title>
       </HeadProvider>
@@ -143,7 +143,7 @@ const UpdateChallenge = () => {
       <div className="flex flex-col gap-1 items-center">
         <h3 className="md:text-4xl text-2xl italic font-semibold flex items-center gap-2">
           Update
-          <span className="text-emerald-700">
+          <span className="text-green-700">
             <Typewriter
               cursorColor="green"
               words={["Challenge"]}
@@ -297,7 +297,7 @@ const UpdateChallenge = () => {
         <div className="w-full sm:w-1/2 mx-auto">
           <Button
             type="submit"
-            className="w-full py-2 rounded-md border-2 text-white! shadow-gray-400/90 bg-linear-to-tr from-emerald-600 to-teal-700 transition-all duration-300 hover:to-gray-600 hover:shadow-md"
+            className="w-full py-2 rounded-md border-2 text-white! shadow-gray-400/90 bg-linear-to-tr from-green-600 to-green-700 transition-all duration-300 hover:to-gray-600 hover:shadow-md"
           >
             <p className="text-lg font-semibold py-1">Update Challenge</p>
           </Button>

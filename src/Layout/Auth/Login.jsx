@@ -140,7 +140,7 @@ const Login = () => {
           <div className="w-full flex flex-col items-center">
             <Button
               type="submit"
-              className="w-full mx-auto py-2 rounded-md border-2 text-white! shadow-gray-400/90 bg-linear-to-tr! from-emerald-500 to-gray-500 hover:to-cyan-600 transition-all duration-300 hover:shadow-md"
+              className="w-full mx-auto py-2 rounded-md border-2 text-white! shadow-gray-400/90 bg-linear-to-tr! from-green-500 to-gray-500 hover:to-cyan-600 transition-all duration-300 hover:shadow-md"
             >
               <p className="text-lg font-semibold py-1">Login</p>
             </Button>
@@ -165,7 +165,7 @@ const Login = () => {
           </Link>
         </p>
         <Link
-          className="text-orange-500 hover:text-teal-800 duration-300 font-bold text-lg"
+          className="text-orange-500 hover:text-green-800 duration-300 font-bold text-lg"
           to={"/forgot"}
         >
           Forgot Password?

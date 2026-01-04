@@ -115,7 +115,7 @@ const Challenges = () => {
                   alt={ch.title}
                   className="w-full h-48 object-cover rounded-md mb-3 shadow-md"
                 />
-                <h3 className="font-bold lg:text-xl text-lg text-emerald-700">
+                <h3 className="font-bold lg:text-xl text-lg text-green-700">
                   {ch.title}
                 </h3>
 
@@ -151,7 +151,7 @@ const Challenges = () => {
                       variant="contained"
                       color="success"
                       size="medium"
-                      className="bg-emerald-600 hover:bg-emerald-700 normal-case"
+                      className="bg-green-600 hover:bg-green-700 normal-case"
                     >
                       View Details
                     </Button>

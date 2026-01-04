@@ -36,7 +36,7 @@ const MyActivities = () => {
       </HeadProvider>
 
       <div className="flex flex-col items-center gap-1 mx-auto text-center">
-        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold text-emerald-700">
+        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold text-green-700">
           My Activities
         </h2>
         <p className="font-medium text-gray-500 text-center">
@@ -59,7 +59,7 @@ const MyActivities = () => {
             <div
               data-aos="zoom-in"
               key={activity._id}
-              className="border rounded-xl bg-linear-to-br from-white via-white to-emerald-200 shadow-gray-400 rounded-br-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-200"
+              className="border rounded-xl bg-linear-to-br from-white via-white to-green-200 shadow-gray-400 rounded-br-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-200"
             >
               {/* <img
                 src={activity.challengeDetails.imageUrl}
@@ -67,7 +67,7 @@ const MyActivities = () => {
                 className="w-full h-48 object-cover"
               /> */}
               <div className="p-5 flex flex-col gap-3">
-                <h3 className="text-lg font-semibold text-emerald-700">
+                <h3 className="text-lg font-semibold text-green-700">
                   {activity.challengeDetails.title}
                 </h3>
                 <p className="text-gray-600 text-base font-medium">

@@ -61,7 +61,7 @@ const MyActivitiesDetails = () => {
         className="w-full max-w-2xl h-72 object-cover rounded-lg shadow-md"
       />
 
-      <h2 className="sm:text-3xl text-2xl font-bold text-emerald-700">
+      <h2 className="sm:text-3xl text-2xl font-bold text-green-700">
         {challenge.challengeDetails.title}
       </h2>
 
@@ -105,7 +105,7 @@ const MyActivitiesDetails = () => {
           <Button
             variant="contained"
             color="success"
-            className="normal-case bg-emerald-600 hover:bg-emerald-700 flex items-center gap-2"
+            className="normal-case bg-green-600 hover:bg-green-700 flex items-center gap-2"
           >
             Update Progress <FaArrowRight></FaArrowRight>
           </Button>

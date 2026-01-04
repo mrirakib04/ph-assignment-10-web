@@ -24,7 +24,7 @@ const HowItWorks = () => {
 
           <div
             data-aos="zoom-in"
-            className="from-white via-white to-teal-200 bg-linear-to-b shadow-md shadow-gray-400 duration-300 rounded-2xl p-5 hover:shadow-lg transition h-full rounded-b-none"
+            className="from-white via-white to-green-200 bg-linear-to-b shadow-md shadow-gray-400 duration-300 rounded-2xl p-5 hover:shadow-lg transition h-full rounded-b-none"
           >
             <div className="text-green-600 text-4xl font-bold mb-3">2</div>
             <h3 className="text-xl font-semibold mb-2">Track Your Progress</h3>

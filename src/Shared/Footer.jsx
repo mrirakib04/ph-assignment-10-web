@@ -4,7 +4,7 @@ import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-linear-to-br from-sky-950 via-black to-emerald-950 py-10 sm:px-8 px-5 flex flex-col items-center">
+    <div className="w-full bg-linear-to-br from-sky-950 via-black to-green-950 py-10 sm:px-8 px-5 flex flex-col items-center">
       <div className="flex flex-wrap justify-between items-start gap-5 w-full py-5 border-b border-gray-500">
         <div className="flex flex-col items-start gap-3">
           <h4 className="lg:text-3xl text-2xl font-bold text-green-100">
