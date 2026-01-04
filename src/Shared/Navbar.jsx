@@ -6,6 +6,7 @@ import { RiMenu2Fill } from "react-icons/ri";
 import { Link, NavLink } from "react-router";
 import { ClickAwayListener } from "@mui/material";
 import MainContext from "../Context/MainContext";
+import { MdDashboard } from "react-icons/md";
 
 const Navbar = () => {
   const { user, userImage, handleLogout } = useContext(MainContext);
@@ -150,11 +151,18 @@ const Navbar = () => {
                   <div>
                     <Link
                       className="text-xl font-semibold hover:text-gray-600 duration-300 hover:scale-105 transition"
-                      to="/profile"
+                      to="/dashboard/profile"
                     >
                       Profile
                     </Link>
                   </div>
+                  <Link
+                    className="text-lg font-bold border-2 border-green-700 hover:border-black hover:bg-black px-3 py-1 w-fit text-center rounded-lg hover:text-white text-green-700 duration-300 mt-3 flex items-center gap-2"
+                    to={"/dashboard"}
+                  >
+                    Dashboard
+                    <MdDashboard></MdDashboard>
+                  </Link>
                   <div>
                     <Link
                       className="text-xl font-semibold text-orange-500 hover:text-orange-700 duration-300 hover:scale-105 transition"
