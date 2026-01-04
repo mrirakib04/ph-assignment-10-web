@@ -115,7 +115,7 @@ const MyActivities = () => {
                       Update Progress
                     </Button>
                   </Link>
-                  <Link to={`/my-activities/${activity._id}`}>
+                  <Link to={`/dashboard/my-activities/${activity._id}`}>
                     <Button variant="contained" color="primary">
                       View More
                     </Button>
