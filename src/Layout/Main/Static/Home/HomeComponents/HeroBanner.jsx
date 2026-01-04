@@ -99,22 +99,24 @@ const HeroBanner = () => {
       </motion.div>
 
       {/* Community Stats */}
-      <div className="flex flex-wrap justify-center gap-8 py-10">
-        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-sky-100 via-white to-white">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 py-10 max-w-7xl mx-auto w-full">
+        <div className="text-center w-full p-10 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-sky-100 via-white to-white">
           <p className="text-3xl font-bold text-green-700">
             {stats.totalParticipants || 0}+
           </p>
           <p className="text-gray-600 font-medium">Active Participants</p>
         </div>
-        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-green-100 via-white to-white">
+        <div className="text-center w-full p-10 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-green-100 via-white to-white">
           <p className="text-3xl font-bold text-green-700">
             {stats.totalChallenges || 0}
           </p>
           <p className="text-gray-600 font-medium">Total Challenges</p>
         </div>
-        <div className="text-center p-5 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-purple-100 via-white to-white">
-          <p className="text-3xl font-bold text-lime-700">20 kg/week</p>
-          <p className="text-gray-600 font-medium">Impact Metric</p>
+        <div className="text-center w-full p-10 rounded-md bg-white shadow-md hover:shadow-lg shadow-gray-400 bg-linear-to-br from-purple-100 via-white to-white">
+          <p className="text-3xl font-bold text-lime-700">
+            {stats.totalUserChallenges || 0}
+          </p>
+          <p className="text-gray-600 font-medium">Accepted Challenges</p>
         </div>
       </div>
     </div>

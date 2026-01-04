@@ -16,6 +16,13 @@ import UpdateChallenge from "../Layout/Main/Private/UpdateChallenge/UpdateChalle
 import IsLogin from "./Security/IsLogin";
 import Main from "../Layout/Main/Main";
 import Dashboard from "../Layout/Main/Dashboard/Dashboard";
+import About from "../Layout/Main/Static/About/About";
+import Career from "../Layout/Main/Static/Career/Career";
+import Contact from "../Layout/Main/Static/Contact/Contact";
+import Conditions from "../Layout/Main/Static/Conditions/Conditions";
+import Policy from "../Layout/Main/Static/Policy/Policy";
+import Mission from "../Layout/Main/Static/Mission/Mission";
+import DashHome from "../Layout/Main/Dashboard/DashHome/DashHome";
 
 const Router = () => {
   return (
@@ -36,6 +43,15 @@ const Router = () => {
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/register" element={<Register></Register>}></Route>
             <Route path="/forgot" element={<Forgot></Forgot>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+            <Route path="/career" element={<Career></Career>}></Route>
+            <Route path="/contact" element={<Contact></Contact>}></Route>
+            <Route path="/mission" element={<Mission></Mission>}></Route>
+            <Route
+              path="/conditions"
+              element={<Conditions></Conditions>}
+            ></Route>
+            <Route path="/policy" element={<Policy></Policy>}></Route>
             {/* private */}
             <Route
               path="/join-challenges/:id"
@@ -69,6 +85,7 @@ const Router = () => {
             }
           >
             {/* Private Routes */}
+            <Route path="/dashboard" element={<DashHome></DashHome>}></Route>
             <Route
               path="/dashboard/add-challenge"
               element={<AddChallenge></AddChallenge>}

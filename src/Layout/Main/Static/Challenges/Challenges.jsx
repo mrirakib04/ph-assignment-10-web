@@ -167,7 +167,7 @@ const Challenges = () => {
                     </Button>
                   )}
                   {user?.email === ch.createdBy && (
-                    <Link to={`/update-challenge/${ch._id}`}>
+                    <Link to={`/dashboard/update-challenge/${ch._id}`}>
                       <Button variant="contained" color="primary" size="medium">
                         Update
                       </Button>

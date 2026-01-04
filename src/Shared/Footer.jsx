@@ -1,6 +1,7 @@
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -19,41 +20,51 @@ const Footer = () => {
         <div className="flex flex-col items-start gap-3">
           <h5 className="font-semibold text-white text-lg">Company</h5>
           <ul className="font-medium text-gray-400 flex flex-col items-start gap-1">
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                Our Mission
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                Contact
-              </a>
-            </li>
+            <Link
+              to={"/about"}
+              className="hover:text-white transition duration-300"
+            >
+              About Us
+            </Link>
+
+            <Link
+              to={"/mission"}
+              className="hover:text-white transition duration-300"
+            >
+              Our Mission
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="hover:text-white transition duration-300"
+            >
+              Contact
+            </Link>
           </ul>
         </div>
         <div className="flex flex-col items-start gap-3">
           <h5 className="font-semibold text-white text-lg">Information</h5>
           <ul className="font-medium text-gray-400 flex flex-col items-start gap-1">
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition duration-300">
-                Join Us
-              </a>
-            </li>
+            <Link
+              to={"/policy"}
+              className="hover:text-white transition duration-300"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              to={"/conditions"}
+              className="hover:text-white transition duration-300"
+            >
+              Terms & Conditions
+            </Link>
+
+            <Link
+              to={"/career"}
+              className="hover:text-white transition duration-300"
+            >
+              Join Us
+            </Link>
           </ul>
         </div>
         <div className="flex flex-col items-start gap-3">
